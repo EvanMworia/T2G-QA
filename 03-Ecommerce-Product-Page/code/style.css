@@ -1,0 +1,135 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Kumbh Sans';
+}
+body {
+	background-color: hsl(0, 0%, 100%);
+}
+.navbar-container {
+	/* border: 2px solid red; */
+	display: flex;
+
+	align-items: center;
+}
+.logo {
+	margin-left: 100px;
+	margin-right: 50px;
+	font-size: x-large;
+}
+
+.navbar {
+	/* border: 2px solid blue; */
+	display: flex;
+	align-items: center;
+	margin-right: 20%;
+}
+.nav-links ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 30vw;
+}
+
+.nav-links ul li {
+	list-style: none;
+}
+.nav-links ul li a {
+	font-size: smaller;
+	text-decoration: none;
+	color: hsl(219, 9%, 45%);
+	font-size: 1.2rem;
+}
+.nav-extra {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	/* border: 1px solid magenta; */
+}
+.nav-extra img {
+	width: 50px;
+	height: 50px;
+	margin: 30px;
+}
+.nav-extra .cart {
+	width: 30px;
+	height: 30px;
+}
+hr {
+	color: hsl(219, 9%, 45%);
+}
+.main-container {
+	display: flex;
+	margin: 5vh 10vw;
+}
+/* .image-section {
+	border: 1px solid red;
+} */
+
+.display-pic .big-pic {
+	height: 60vh;
+	width: 25vw;
+	border-radius: 5%;
+	margin-bottom: 15px;
+}
+.thumbnails-container {
+	display: flex;
+	justify-content: space-between;
+}
+.thumbnails-container img {
+	width: 70px;
+	height: 70px;
+	border-radius: 9%;
+	/* border: 1px solid red; */
+}
+.description-section {
+	/* border: 1px solid green; */
+	margin-top: 50px;
+	margin-left: 100px;
+}
+.brand-name {
+	color: hsl(219, 9%, 45%);
+}
+.description-section .shoe-description {
+	color: hsl(219, 9%, 45%);
+}
+.description-section .selling-price {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+.description-section .price-off {
+	border-radius: 2px;
+	background-color: hsl(220, 13%, 13%);
+	color: hsl(0, 0%, 100%);
+}
+.description-section .previous-price {
+	color: hsl(219, 9%, 45%);
+	text-decoration: line-through;
+}
+.action-btns {
+	display: flex;
+}
+.action-btns input {
+	width: 50px;
+	text-align: center;
+}
+.qty-control {
+	height: 45px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+.cart-btn {
+	height: 45px;
+	width: 200px;
+	font-weight: bolder;
+	justify-content: center;
+	color: hsl(220, 13%, 13%);
+	background-color: hsl(26, 100%, 55%);
+	margin-left: 15px;
+	border-radius: 10px;
+}
