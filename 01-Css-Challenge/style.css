@@ -21,7 +21,6 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: ffff;
 	/* background-color: rgb(242, 242, 242, 0.2); */
 }
 
@@ -65,39 +64,38 @@ body {
 	height: 6vh;
 	color: white;
 	background-color: rgb(0, 136, 255);
-	/* background-color: rgb(255, 255, 255, 0.3); */
-	border-radius: 10px;
+	border-radius: 2px;
 	border: 2px solid rgb(255, 255, 255, 0.3);
-	/* transition: all 0.3s ease-in-out; */
+	transition: all 0.3s ease-in-out;
 }
-/* .navbar .left .signup:hover {
+.navbar .left .signup:hover {
 	background-color: rgb(0, 136, 255);
 	color: white;
 	cursor: pointer;
-} */
+}
 
 .navbar .left .signin {
 	border: none;
-	outline: none;
 	width: 10vw;
 	height: 6vh;
 	color: white;
 	background-color: transparent;
-	border-radius: 100px;
-	border: 2px solid rgb(255, 255, 255, 0.3);
+	border-radius: 10px;
+
+	transition: all 0.3s ease-in-out;
 }
-/* .navbar .left .signin:hover {
+.navbar .left .signin:hover {
 	background-color: rgb(255, 255, 255, 0.3);
 	color: white;
 	cursor: pointer;
-} */
+}
 
-.hero-section {
+.heroes-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	border: 2px solid black;
+
 	width: 99vw;
 	height: 90vh;
 	background: url('./images/hero.png') center/cover;
@@ -107,21 +105,23 @@ body {
 	text-align: center;
 }
 
-.hero-section h1 {
+.heroes-section h1 {
 	margin-top: 20vh;
 	font-size: 2.5rem;
 	margin-bottom: 20px;
 }
 
-.hero-section .hero-buttons {
+.heroes-section .heroe-buttons {
 	margin-top: 5vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 40px;
 }
-
-.hero-buttons button {
+.heroes-section .quote-btn {
+	background-color: rgb(0, 136, 255);
+}
+.heroe-buttons button {
 	border: none;
 	width: 20vw;
 	height: 8vh;
@@ -129,11 +129,10 @@ body {
 	background-color: rgb(255, 255, 255, 0.3);
 	border-radius: 20px;
 	border: 2px solid rgb(255, 255, 255, 0.3);
+	transition: all 0.3s ease-in-out;
 }
-.hero-buttons .get-quote-btn {
-	background-color: rgb(0, 136, 255);
-}
-/* .hero-buttons button:hover {
+
+/* .heroe-buttons button:hover {
 	background-color: rgb(0, 136, 255);
 	color: white;
 	cursor: pointer;
@@ -143,13 +142,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 30px;
+	gap: 50px;
 	/* border: 3px solid black; */
 }
 .services .container {
 	margin-top: -90px;
 	width: 20vw;
-	height: 25vh;
+	height: 30vh;
 	background-color: white;
 	margin-bottom: 30vh;
 	display: flex;
@@ -157,7 +156,7 @@ body {
 	justify-content: flex-start;
 	align-items: flex-start;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	border-radius: 0px;
+	border-radius: 10px;
 }
 
 .services .container img {
@@ -181,7 +180,7 @@ body {
 	margin-top: -90px;
 	/* border: 2px solid black; */
 	width: 20vw;
-	height: 25vh;
+	height: 30vh;
 	background-color: rgb(0, 136, 255);
 	margin-bottom: 30vh;
 	display: flex;
@@ -190,7 +189,7 @@ body {
 	align-items: flex-start;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	color: white;
-	border-radius: 0px;
+	border-radius: 10px;
 }
 
 .container3 img {
@@ -210,8 +209,6 @@ body {
 	font-size: 1rem;
 }
 
-/* ---- Copy of Services ----- */
-
 .services-copy {
 	display: flex;
 	justify-content: space-evenly;
@@ -230,7 +227,6 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-
 	/* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 	border-radius: 10px;
 }
@@ -252,7 +248,6 @@ body {
 	font-size: 1rem;
 }
 
-/* ---INDUSTRY SECTION STARTS HERE----- */
 .header {
 	display: flex;
 	flex-direction: column;
@@ -306,6 +301,7 @@ body {
 	width: 20px;
 	height: 20px;
 }
+
 .sponsors {
 	margin-top: 20vh;
 	height: 10vh;
@@ -327,18 +323,16 @@ body {
 	background: linear-gradient(to bottom right, #1b16a1, #8e44ad);
 	justify-content: space-around;
 	align-items: center;
-	width: 98vw;
+	width: 70vw;
 	height: 10vh;
-	border: 2px solid black;
 	color: white;
 }
 
-/* --- PRICING SECTION STARTS HERE--- */
 .action input {
 	width: 20vw;
 	height: 6vh;
 	border-radius: 10px;
-	border: 2px solid rgb(0, 136, 255);
+
 	outline: none;
 	padding-left: 10px;
 }
@@ -602,8 +596,6 @@ form button:hover {
 	color: black;
 	padding: 20px;
 	width: 98vw;
-	text-align: center;
-	display: flex;
 }
 
 table {
@@ -627,7 +619,7 @@ th {
 	color: black;
 }
 
-/* .footer {
+.footer {
 	margin-top: 5vh;
 	height: 10vh;
 	width: 98vw;
@@ -635,72 +627,93 @@ th {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(95, 9, 9, 0.3);
-} */
+}
 
-@media screen and (max-width: 600px) {
+/* Media query for smaller screens */
+@media screen and (max-width: 435px) {
 	.navbar {
-		justify-content: center;
-		align-items: center;
+		display: none;
 	}
-	.nav-links ul {
+
+	.heroe-buttons {
 		flex-direction: column;
-		margin-left: 20px;
-		margin-top: 40px;
-		gap: 5px;
+		gap: 10px;
 	}
-	/* .services {
-		
-	} */
+	.heroe-buttons button {
+		width: 80vw;
+	}
+
+	.services {
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 100px;
+	}
+
 	.services .container {
-		margin-top: 30px;
-		font-size: smaller;
-		height: 45vh;
-		width: 26vw;
-		gap: 0px;
+		width: 80vw;
 	}
 	.services .container3 {
-		margin-top: 30px;
-		/* font-size: x-small; */
-		height: 45vh;
-		width: 32vw;
-		/* gap: 0px; */
+		width: 80vw;
 	}
 	.services-copy {
-		flex-direction: column-reverse;
+		flex-direction: column;
+
+		gap: 20px;
+	}
+	.services-copy {
+		width: 80vw;
 	}
 	.services-copy .container {
-		width: 50vw;
-		height: 50vh;
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		width: 80vw;
 	}
-	.profiles {
-		border: 1px solid red;
-		height: 70vh;
+
+	.user p {
+		font-size: 0.8rem;
+		text-align: start;
+		margin-left: 10px;
 	}
-	.profiles .user {
-		height: 70vh;
+
+	.user .ratings img {
+		width: 10px;
+		height: 10px;
 	}
+
 	.subscription {
-		border: 10px solid red;
-		height: 25vh;
+		border: 2px solid green;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 200px;
+	}
+
+	.action input {
+		margin-top: 5vh;
+		width: 98vw;
+	}
+
+	.action button {
+		margin-top: 5vh;
+		width: 98vw;
+	}
+	.pricing {
+		border: 2px solid orange;
+		margin-top: 100px;
+	}
+
+	/* .plans {
+		border: 2px solid red;
+		margin-top: 70vh;
 		flex-direction: column;
 	}
-	.action {
-		display: flex;
+	.plan {
+		width: 80vw;
 	}
-	.action input {
-		width: 50vw;
-		margin-right: 10px;
-	}
-	.action button {
-		height: 6vh;
-		width: 25vw;
-	}
-	/* ----------GPT-------- */
-	.pricing {
-		margin-top: 5vh;
-		padding: 10px;
-	}
+
+	.plan-standard {
+		margin-top: 10vh;
+		width: 80vw;
+		height: 70vh;
+		margin-bottom: 5vh;
+	} */
 
 	.plans {
 		flex-direction: column; /* Stack plans vertically */
@@ -721,48 +734,208 @@ th {
 		height: auto; /* Allow content to define height */
 	}
 
-	.features {
-		flex-direction: row; /* Keep features inline for readability */
-		gap: 10px; /* Reduce gap between features */
+	.plan button {
+		width: 60vw;
 	}
-
-	.features img {
-		width: 20px; /* Smaller icons for mobile */
-		height: 20px;
-	}
-
-	.plan button,
 	.plan-standard button {
-		width: 80%; /* Reduce button width */
-		height: 5vh; /* Adjust height for smaller screens */
-		font-size: 1rem; /* Slightly smaller font */
+		height: 6vh;
+		width: 60vw;
 	}
 
-	.pricing h1 {
-		font-size: 1.8rem; /* Adjust title size */
+	.map-section {
+		margin-top: 20vh;
+		justify-content: space-between;
+	}
+	.map-section img {
+		margin-right: 30px;
+		object-fit: cover;
 	}
 
-	.pricing p {
-		font-size: 1rem; /* Adjust paragraph size */
-	}
-	/* -----------Contact--- */
 	.appointment {
-		width: 75vw;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-left: 100px;
+		margin-top: 5px;
+		box-shadow: none;
 	}
+
+	.appointment img {
+		display: none;
+	}
+	.appointment form {
+		width: 98vw;
+	}
+
 	form input {
-		width: 40vw;
+		width: 80vw;
 	}
+
+	form button {
+		width: 80vw;
+	}
+
 	.contactus {
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		margin-top: 5vh;
-		height: 35vh;
+		height: 20vh;
+	}
+	.contactus .left {
+		width: 90vw;
+		margin-bottom: 5vh;
+		margin-right: 10vw;
 	}
 	.contactus .right button {
-		width: 20vw;
+		width: 80vw;
+		margin-bottom: 20vh;
 	}
-	.footer-table {
+
+	.footer-table td:last-child,
+	.footer-table th:last-child {
+		display: none;
+	}
+}
+
+/* Media query for tablet screens */
+
+@media screen and (max-width: 770px) {
+	.navbar {
+		display: none;
+	}
+
+	.heroe-buttons {
 		flex-direction: column;
-		flex-wrap: wrap;
+		gap: 10px;
+	}
+	.heroe-buttons button {
+		width: 80vw;
+	}
+
+	.services {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.services .container {
+		width: 80vw;
+	}
+	.services .container3 {
+		width: 80vw;
+	}
+	.services-copy {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.services-copy {
+		width: 80vw;
+	}
+	.services-copy .container {
+		width: 80vw;
+	}
+
+	.user p {
+		font-size: 0.8rem;
+		text-align: start;
+		margin-left: 10px;
+	}
+
+	.user .ratings img {
+		width: 10px;
+		height: 10px;
+	}
+
+	.subscription {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.action input {
+		margin-top: 5vh;
+		width: 98vw;
+	}
+
+	.action button {
+		margin-top: 5vh;
+		width: 98vw;
+	}
+
+	.plans {
+		margin-top: 70vh;
+		flex-direction: column;
+	}
+	.plan {
+		width: 80vw;
+	}
+
+	.plan-standard {
+		margin-top: 10vh;
+		width: 80vw;
+		height: 90vh;
+		margin-bottom: 5vh;
+	}
+
+	.plan button {
+		width: 60vw;
+	}
+	.plan-standard button {
+		height: 6vh;
+		width: 60vw;
+	}
+
+	.map-section {
+		margin-top: 60vh;
+		justify-content: space-between;
+	}
+	.map-section img {
+		margin-right: 30px;
+		object-fit: cover;
+	}
+
+	.appointment {
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
+		margin-left: 100px;
+		margin-top: 5px;
+		box-shadow: none;
+	}
+
+	.appointment img {
+		display: none;
+	}
+	.appointment form {
+		width: 98vw;
+	}
+
+	form input {
+		width: 80vw;
+	}
+
+	form button {
+		width: 80vw;
+	}
+
+	.contactus {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 5vh;
+		height: 20vh;
+	}
+	.contactus .left {
+		width: 90vw;
+		margin-bottom: 5vh;
+		margin-right: 10vw;
+	}
+	.contactus .right button {
+		width: 80vw;
+		margin-bottom: 20vh;
+	}
+
+	.footer-table td:last-child,
+	.footer-table th:last-child {
+		display: none;
 	}
 }

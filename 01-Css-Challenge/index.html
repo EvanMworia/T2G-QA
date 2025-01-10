@@ -3,15 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title></title>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
-		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha384-ezpkh0EX2L5I6j1taU6g5vi9JDR+ciRR8h8x1RJr58paipAZT4JncN6Q3UaM8bI6"
+			crossorigin="anonymous"
+		/>
+
 		<link rel="stylesheet" href="style.css" />
+		<title>Css Challenge</title>
 	</head>
 	<body>
-		<div class="main-container">
-			<div class="hero-section">
+		<section>
+			<div class="heroes-section">
 				<section>
 					<div class="navbar">
 						<div class="right">
@@ -38,65 +48,59 @@
 					We Know how large Objects will act , but things on a <br />
 					small scale just do not act that way
 				</p>
-				<div class="hero-buttons">
-					<button class="get-quote-btn">Get Quote Now</button>
-					<button class="learn-more-btn">Learn More</button>
+				<div class="heroe-buttons">
+					<button class="quote-btn">Get Quote Now</button>
+					<button>Learn More</button>
 				</div>
 			</div>
-		</div>
+			<div class="services">
+				<div class="container">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>Peace of Mind</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
+				</div>
+				<div class="container">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>Set For Life</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
+				</div>
+				<div class="container3">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>100% Satisfaction</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
+				</div>
+			</div>
 
-		<!-- ---The overlapping part--- -->
-		<div class="services">
-			<div class="container">
-				<div class="logo">
-					<!-- <ion-icon name="people-outline"></ion-icon> -->
-					<img src="./images/person.png" alt="" srcset="" />
+			<div class="services-copy">
+				<div class="container">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>Peace of Mind</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
 				</div>
-				<h1>Peace of Mind</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
-			</div>
-			<div class="container">
-				<div class="logo">
-					<img src="./images/person.png" alt="" srcset="" />
+				<div class="container">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>Set For Life</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
 				</div>
-				<h1>Set For Life</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
-			</div>
-			<div class="container3">
-				<div class="logo">
-					<img src="./images/person.png" alt="" srcset="" />
+				<div class="container">
+					<div class="logo">
+						<img src="./images/person.png" alt="" srcset="" />
+					</div>
+					<h1>100% Satisfaction</h1>
+					<p>The quick fox jumps over the lazy dog .</p>
 				</div>
-				<h1>100% Satisfaction</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
 			</div>
-		</div>
-
-		<!-- ---- Copy of Services ----- -->
-		<div class="services-copy">
-			<div class="container">
-				<div class="logo">
-					<img src="./images/person.png" alt="" srcset="" />
-				</div>
-				<h1>Peace of Mind</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
-			</div>
-			<div class="container">
-				<div class="logo">
-					<img src="./images/person.png" alt="" srcset="" />
-				</div>
-				<h1>Set For Life</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
-			</div>
-			<div class="container">
-				<div class="logo">
-					<img src="./images/person.png" alt="" srcset="" />
-				</div>
-				<h1>100% Satisfaction</h1>
-				<p>The quick fox jumps over the lazy dog .</p>
-			</div>
-		</div>
-
-		<!-- ---INDUSTRY SECTION STARTS HERE ----- -->
+		</section>
 		<section>
 			<div class="header">
 				<h1>Industry</h1>
@@ -159,6 +163,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section>
 			<div class="sponsors">
 				<img src="./images/Vector.png" alt="" />
@@ -180,7 +185,6 @@
 			</div>
 		</section>
 
-		<!-- --- PRICING SECTION STARTS HERE---- -->
 		<section>
 			<div class="pricing">
 				<h1>Pricing</h1>
@@ -341,7 +345,6 @@
 		</section>
 		<section>
 			<section class="footer-table">
-				<!-- <div class="footer-table"> -->
 				<table>
 					<thead>
 						<tr>
@@ -379,16 +382,12 @@
 							<td>Blog</td>
 							<td>Blog</td>
 							<td>Unlimited Support</td>
-							<!-- Leave an empty cell for the Resources column as there is no corresponding item for this row -->
+
 							<td></td>
 						</tr>
 					</tbody>
 				</table>
-				<!-- </div> -->
 			</section>
-			<!-- <div class="footer">
-				<p>Made with Love Figmaland All Right Reserved</p>
-			</div> -->
 		</section>
 	</body>
 </html>
