@@ -43,9 +43,8 @@ package-lock.json
 yarn.lock
 
 # Ignore compiled JavaScript files
-*.js
-*.d.ts
-*.js.map
+
+
 
 # Ignore npm global installs
 .npm/
