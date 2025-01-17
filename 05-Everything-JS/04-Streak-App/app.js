@@ -34,11 +34,14 @@ function createNewHabit() {
 	const streak = habitStartDate.value;
 
 	const newHabit = { id, image, title, streak };
-
-	trackedHabits.push(newHabit);
-	alert('Habit added succesfully to streak App');
+	if (newHabit.image.trim() == 0 && newHabit.title.trim() == 0) {
+		alert('Values Cant Be Empty');
+	} else {
+		trackedHabits.push(newHabit);
+		setTimeout(alert('Habit added succesfully to streak App'), 5000);
+		displayHabits();
+	}
 	console.log(newHabit);
-	displayHabits();
 	habitTitle.value = '';
 	habitImage.value = '';
 	habitStartDate.value = '';
