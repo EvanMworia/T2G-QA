@@ -23,10 +23,10 @@ saveBtn.addEventListener('onmouseenter ', console.log('yes'));
 // 	});
 // });
 
-deleteHabit.addEventListener('click', (event) => {
-	const habitId = event.target.getAttribute('data-id');
-	removeHabit(parseInt(habitId)); // Call deleteMovie with the id of the clicked habit
-});
+// deleteHabit.addEventListener('click', (event) => {
+// 	const habitId = event.target.getAttribute('data-id');
+// 	removeHabit(parseInt(habitId)); // Call deleteMovie with the id of the clicked habit
+// });
 
 //Create a new Habit and store it in an Array
 function createNewHabit() {
@@ -41,6 +41,9 @@ function createNewHabit() {
 	trackedHabits.push(newHabit);
 	console.log(newHabit);
 	displayHabits();
+	habitTitle.value = '';
+	habitImage.value = '';
+	habitStartDate.value = '';
 }
 
 function displayHabits() {
@@ -52,7 +55,7 @@ function displayHabits() {
 				<div>
 					<p class="habit-title">${habit.title}</p>
 					<p class="streak-info">Streak since:${habit.streak}(${streakDays} days)</p>
-					<button class="delete-habit" id="delete-habit" data-id="${habit.id}">Delete Habit</button>
+					<button class="delete-habit" id="delete-habit" onclick="removeHabit(${habit.id})">Delete Habit</button>
 				</div>
 			</div>
 `;
@@ -61,8 +64,13 @@ function displayHabits() {
 
 // Delete a habit by its ID
 function removeHabit(habitId) {
-	// Filter the TrackedHabits array to remove the movie with the given id
-	habits = trackedHabits.filter((habit) => habit.id !== habitId);
+	let index = trackedHabits
+		.map((habit) => {
+			return habit.id;
+		})
+		.indexOf(habitId);
+
+	trackedHabits.splice(index, 1);
 	displayHabits(); // Re-render the tracked habit list
 }
 function habitLoader() {
