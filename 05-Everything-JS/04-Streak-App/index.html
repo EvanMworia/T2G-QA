@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Streak App</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="app.js" defer></script>
+	</head>
+	<body>
+		<h1>Welcome to Streak App</h1>
+
+		<h3 class="phrase">"One day or day one"</h3>
+		<div class="habit-container">
+			<!-- More Dummy habits -->
+			<!-- <div class="habit-card">
+				<img src="https://cdn.pixabay.com/photo/2023/10/04/14/15/man-8293794_1280.jpg" alt="Habit Image" />
+				<div>
+					<p class="habit-title">Morning Run</p>
+					<p class="streak-info">Streak: 15 days</p>
+					<button class="delete-habit" id="delete-habit">Delete Habit</button>
+				</div>
+			</div> -->
+
+			<!-- More dummy habits -->
+			<!-- <div class="habit-card">
+				<img src="https://cdn.pixabay.com/photo/2023/10/04/14/15/man-8293794_1280.jpg" alt="Habit Image" />
+				<div>
+					<p class="habit-title">Morning Run</p>
+					<p class="streak-info">Streak: 15 days</p>
+					<button class="delete-habit" id="delete-habit">Delete Habit</button>
+				</div>
+			</div> -->
+		</div>
+		<button class="add-new-btn" id="add-new-btn" onclick="window.scrollTo('form-container')">Add New Habit</button>
+
+		<div class="form-container">
+			<form id="habit-form">
+				<h2>Add a New Habit</h2>
+
+				<label for="habit-title">Habit Title</label>
+				<input type="text" id="habit-title" name="habit-title" placeholder="Enter habit title" required />
+
+				<label for="habit-image">Habit Image URL</label>
+				<input type="url" id="habit-image" name="habit-image" placeholder="Enter image URL" required />
+
+				<label for="start-date">Start Date</label>
+				<input type="date" id="start-date" name="start-date" required />
+				<div class="form-buttons">
+					<button type="button" class="close-btn" onclick="window.location.href='index.html'">Close</button>
+					<button type="button" class="save-btn" id="save-btn">Save</button>
+				</div>
+			</form>
+		</div>
+		<!-- Add New Habit Button -->
+	</body>
+</html>
