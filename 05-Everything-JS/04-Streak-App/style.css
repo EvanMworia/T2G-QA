@@ -111,7 +111,9 @@ h3 {
 	max-width: 400px;
 	width: 90%;
 }
-
+.hidden {
+	display: none;
+}
 form {
 	display: flex;
 	flex-direction: column;

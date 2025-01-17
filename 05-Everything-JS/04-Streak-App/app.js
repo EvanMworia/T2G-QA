@@ -1,6 +1,7 @@
 let trackedHabits = [];
 
 let habitTitle = document.getElementById('habit-title');
+let habitForm = document.getElementById('habit-form');
 let habitImage = document.getElementById('habit-image');
 let habitStartDate = document.getElementById('start-date');
 let saveBtn = document.getElementById('save-btn');
@@ -9,27 +10,24 @@ let habitContainer = document.querySelector('.habit-container');
 let deleteHabit = document.getElementById('delete-habit');
 let addNewHabit = document.getElementById('add-new-btn');
 
+let formContainer = document.querySelector('.form-container');
+
 // EVENT LISTENERS
 // Add event listeners for the SAVE button
 saveBtn.addEventListener('click', createNewHabit);
 saveBtn.addEventListener('onmouseenter ', console.log('yes'));
 
-// Add event listeners for the delete buttons
+//Add Event Listener to toggle the visibility of the form
+// Add event listener for the Add habitButton
+addNewHabit.addEventListener('click', () => {
+	// Toggle the 'hidden' class on the form container
 
-// deleteHabit.forEach((button) => {
-// 	button.addEventListener('click', (event) => {
-// 		const habitId = event.target.getAttribute('data-id');
-// 		removeHabit(parseInt(habitId)); // Call deleteMovie with the id of the clicked habit
-// 	});
-// });
-
-// deleteHabit.addEventListener('click', (event) => {
-// 	const habitId = event.target.getAttribute('data-id');
-// 	removeHabit(parseInt(habitId)); // Call deleteMovie with the id of the clicked habit
-// });
+	formContainer.classList.toggle('hidden');
+});
 
 //Create a new Habit and store it in an Array
 function createNewHabit() {
+	// habitForm.event.preventDefault();
 	const id = trackedHabits.length + 1;
 	const image = habitImage.value;
 	const title = habitTitle.value;
@@ -37,8 +35,8 @@ function createNewHabit() {
 
 	const newHabit = { id, image, title, streak };
 
-	console.log('new habit', newHabit);
 	trackedHabits.push(newHabit);
+	alert('Habit added succesfully to streak App');
 	console.log(newHabit);
 	displayHabits();
 	habitTitle.value = '';
@@ -72,6 +70,7 @@ function removeHabit(habitId) {
 
 	trackedHabits.splice(index, 1);
 	displayHabits(); // Re-render the tracked habit list
+	habitLoader();
 }
 function habitLoader() {
 	if (trackedHabits.length == 0) {

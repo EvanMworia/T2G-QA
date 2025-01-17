@@ -32,9 +32,9 @@
 				</div>
 			</div> -->
 		</div>
-		<button class="add-new-btn" id="add-new-btn" onclick="window.scrollTo('form-container')">Add New Habit</button>
+		<button class="add-new-btn" id="add-new-btn">Toggle Form</button>
 
-		<div class="form-container">
+		<div class="form-container hidden">
 			<form id="habit-form">
 				<h2>Add a New Habit</h2>
 
@@ -47,8 +47,8 @@
 				<label for="start-date">Start Date</label>
 				<input type="date" id="start-date" name="start-date" required />
 				<div class="form-buttons">
-					<button type="button" class="close-btn" onclick="window.location.href='index.html'">Close</button>
-					<button type="button" class="save-btn" id="save-btn">Save</button>
+					<!-- <button type="button" class="close-btn">Close</button> -->
+					<button type="submit" class="save-btn" id="save-btn">Save</button>
 				</div>
 			</form>
 		</div>
