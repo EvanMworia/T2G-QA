@@ -12,6 +12,9 @@ let addNewHabit = document.getElementById('add-new-btn');
 
 let formContainer = document.querySelector('.form-container');
 
+const todaysDate = new Date().toISOString().split('T')[0];
+habitStartDate.setAttribute('max', todaysDate);
+
 // EVENT LISTENERS
 // Add event listeners for the SAVE button
 saveBtn.addEventListener('click', createNewHabit);
@@ -29,19 +32,25 @@ addNewHabit.addEventListener('click', () => {
 function createNewHabit() {
 	// habitForm.event.preventDefault();
 	const id = trackedHabits.length + 1;
-	const image = habitImage.value;
-	const title = habitTitle.value;
-	const streak = habitStartDate.value;
+	const image = habitImage.value.trim();
+	const title = habitTitle.value.trim();
+	const streak = habitStartDate.value.trim();
 
 	const newHabit = { id, image, title, streak };
-	if (newHabit.image.trim() == 0 && newHabit.title.trim() == 0) {
-		alert('Values Cant Be Empty');
-	} else {
-		trackedHabits.push(newHabit);
-		setTimeout(alert('Habit added succesfully to streak App'), 5000);
-		displayHabits();
+
+	document.getElementById('habit-form').addEventListener('submit', (event) => {
+		event.preventDefault(); // Prevent form from submitting
+	});
+
+	if (!title || !image || !streak) {
+		console.log('Empty fields');
+		alert('Please fill in all the fields.');
+		return; // Stop further processing
 	}
+	trackedHabits.push(newHabit);
+	displayHabits();
 	console.log(newHabit);
+	//clear the input fields, for a new entry
 	habitTitle.value = '';
 	habitImage.value = '';
 	habitStartDate.value = '';
