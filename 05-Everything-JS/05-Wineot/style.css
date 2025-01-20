@@ -1,0 +1,110 @@
+* {
+	margin: 0px;
+	font-family: 'Playfair display', serif;
+}
+body {
+	font-family: 'Playfair display', serif;
+}
+.logo {
+	font-family: 'Playfair display', serif;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #a19b98;
+	/* color: #4f2d21; */
+}
+
+.logo span {
+	color: #6b0504;
+	/* color: #644539; */
+	font-style: italic;
+}
+
+.nav-container {
+	background-color: #000000;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+.nav-left {
+	display: flex;
+	justify-content: center;
+}
+.nav-left ul {
+	display: flex;
+	gap: 30px;
+	text-decoration: none;
+	list-style: none;
+}
+.nav-right {
+	align-items: center;
+	justify-content: flex-end;
+}
+.hero-container {
+	/* overflow-x: hidden; */
+	background-color: #000000;
+	color: white;
+	display: flex;
+	height: 95vh;
+	width: 100vw;
+	position: relative;
+}
+.hero-left {
+	background-color: #000000;
+	color: white;
+	display: flex;
+}
+.venn-left {
+	background-color: #6b0504;
+	/* background-color: #8c6d5e; */
+	border-radius: 100%;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: 150px;
+	left: 100px;
+}
+
+.venn-right {
+	border-radius: 100%;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: 150px;
+	left: 300px;
+}
+.venn-right img {
+	border-radius: 100%;
+	height: 300px;
+	width: 300px;
+}
+.hero-right {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+.hero-right h1 {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	/* color: #8c6d5e; */
+	margin-right: 100px;
+	font-family: 'Kumbh Sans', serif;
+	font-size: 5rem;
+	font-weight: lighter;
+}
+.hero-right h4 {
+	position: absolute;
+	top: 250px;
+	right: 150px;
+	font-weight: lighter;
+	font-family: 'Kumbh Sans', serif;
+	font-size: 2rem;
+}
+
+.hero-phrase span {
+	color: #6b0504;
+	/* color: #644539; */
+	font-style: italic;
+}
