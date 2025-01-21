@@ -1,31 +1,49 @@
 {
-	"users": [
-		{
-			"userId": 1,
-			"username": "admin",
-			"email": "admin@admin.com",
-			"password": "123"
-		}
-	],
-	"products": [
-		{
-			"productId": 1,
-			"productName": "Divai",
-			"productPrice": 1,
-			"productDescription": "Water to wine"
-		}
-	],
-	"cartItems": [
-		{
-			"userId": 1,
-			"addedProducts": [
-				{
-					"productId": 1,
-					"productName": "Divai",
-					"quantity": 1
-				}
-			],
-			"totalPrice": 1
-		}
-	]
+  "users": [
+    {
+      "userId": 1,
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Divai",
+      "description": "Water to wine",
+      "price": 1,
+      "image": "image.com",
+      "rating": 5
+    },
+    {
+      "id": "01fb",
+      "name": "test",
+      "description": "test description",
+      "price": "2",
+      "imageUrl": "https://i.pinimg.com/736x/2b/6d/dd/2b6ddd34e8260e10dd157b6ec01a2e21.jpg",
+      "rating": "2"
+    },
+    {
+      "id": "a825",
+      "name": "Crimson Vines Cabernet",
+      "description": "rich and full-bodied red wine",
+      "price": "24.99",
+      "imageUrl": "https://i.pinimg.com/736x/39/2b/22/392b2283f457d6a89f494c65a3070792.jpg",
+      "rating": "4.5"
+    }
+  ],
+  "cartItems": [
+    {
+      "userId": 1,
+      "addedProducts": [
+        {
+          "productId": 1,
+          "productName": "Divai",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 1
+    }
+  ]
 }
