@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Panel</title>
+		<link rel="stylesheet" href="adminStyle.css" />
+		<script defer src="admin.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<section class="admin-table">
+				<h2>Inventory in stock</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Price</th>
+							<th>Image</th>
+							<th>Rating</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Wine A</td>
+							<td>A red wine with a rich flavor.</td>
+							<td>$25.00</td>
+							<td><img src="https://via.placeholder.com/50" alt="Wine A Image" /></td>
+							<td>4.5/5</td>
+							<td>
+								<div class="button-container">
+									<button id="update-btn-1" class="update-btn">Update</button>
+									<button id="delete-btn-1" class="delete-btn">Delete</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Wine B</td>
+							<td>A white wine with a crisp finish.</td>
+							<td>$18.00</td>
+							<td><img src="https://via.placeholder.com/50" alt="Wine B Image" /></td>
+							<td>4.2/5</td>
+							<td>
+								<div class="button-container">
+									<button id="update-btn-2" class="update-btn">Update</button>
+									<button id="delete-btn-2" class="delete-btn">Delete</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Wine C</td>
+							<td>
+								A sparkling winesssssssssssssssssssssssssssssssssssssssssss, perfect for celebrations.
+							</td>
+							<td>$35.00</td>
+							<td><img src="https://via.placeholder.com/50" alt="Wine C Image" /></td>
+							<td>4.8/5</td>
+							<td>
+								<div class="button-container">
+									<button id="update-btn-3" class="update-btn">Update</button>
+									<button id="delete-btn-3" class="delete-btn">Delete</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section class="admin-form">
+				<h2>Add a New Product</h2>
+				<form id="product-form">
+					<div class="form-group">
+						<label for="product-name">Product Name</label>
+						<input
+							type="text"
+							id="product-name"
+							name="product-name"
+							placeholder="Enter product name"
+							required
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="product-description">Description</label>
+						<textarea
+							id="product-description"
+							name="product-description"
+							placeholder="Enter product description"
+							rows="4"
+							required
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="product-price">Price (USD)</label>
+						<input
+							type="number"
+							id="product-price"
+							name="product-price"
+							step="0.01"
+							placeholder="Enter price"
+							required
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="product-image">Image URL</label>
+						<input
+							type="url"
+							id="product-image"
+							name="product-image"
+							placeholder="Enter image URL"
+							required
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="product-rating">Rating (out of 5)</label>
+						<input
+							type="number"
+							id="product-rating"
+							name="product-rating"
+							step="0.1"
+							min="0"
+							max="5"
+							placeholder="Enter rating"
+						/>
+					</div>
+
+					<button id="submit-product" type="submit">Add Product</button>
+				</form>
+			</section>
+		</div>
+	</body>
+</html>
