@@ -6,38 +6,73 @@ body {
 	font-family: 'Playfair display', serif;
 }
 .logo {
-	font-family: 'Playfair display', serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 3rem;
 	font-weight: bold;
 	color: #a19b98;
-	/* color: #4f2d21; */
 }
 
 .logo span {
 	color: #6b0504;
-	/* color: #644539; */
 	font-style: italic;
 }
 
+/* Navbar container */
 .nav-container {
-	background-color: #000000;
+	background-color: #000000; /* Black background for contrast */
 	color: white;
 	display: flex;
 	align-items: center;
+	justify-content: space-between; /* Space between the left and right sections */
+	padding: 10px 40px; /* Add some padding for spacing */
 }
+
+/* Left side of the navbar */
 .nav-left {
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	gap: 30px; /* Space between logo and nav items */
 }
+
+/* Navigation links */
 .nav-left ul {
 	display: flex;
-	gap: 30px;
+	gap: 30px; /* Space between links */
 	text-decoration: none;
 	list-style: none;
 }
+
+.nav-left ul li {
+	font-family: 'Montserrat', sans-serif; /* Stylish, modern font */
+	color: #a19b98;
+	/* Reddish color */
+	font-size: 1rem;
+	text-transform: uppercase; /* Capitalized text */
+	letter-spacing: 1.5px; /* Decent spacing between letters */
+	cursor: pointer;
+	transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-left ul li:hover {
+	color: #6b0504; /* Change color on hover */
+}
+
+/* Right side of the navbar (Cart icon) */
 .nav-right {
+	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: flex-end; /* Push the cart to the far right */
+}
+
+.nav-right ion-icon {
+	font-size: 1.5rem;
+	color: white; /* Default cart color */
+	cursor: pointer;
+	transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-right ion-icon:hover {
+	color: #6b0504; /* Reddish color on hover */
 }
 .hero-container {
 	/* overflow-x: hidden; */
@@ -107,4 +142,248 @@ body {
 	color: #6b0504;
 	/* color: #644539; */
 	font-style: italic;
+}
+
+.services {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.services .container {
+	z-index: 2;
+	margin-top: -90px;
+	width: 20vw;
+	height: 35vh;
+	background-color: white;
+	margin-bottom: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Original shadow */
+	border-radius: 10px;
+	padding: 15px; /* Inner spacing for content */
+	transition: box-shadow 0.4s ease, transform 0.4s ease; /* Smooth animation */
+
+	/* Gradient border */
+	position: relative; /* Needed for pseudo-element positioning */
+	overflow: hidden; /* Ensure pseudo-elements don't overflow */
+}
+.services .container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px; /* Matches container */
+	padding: 2px; /* Border thickness */
+	background: linear-gradient(180deg, #6b0504, #f5f5f5); /* Gradient from top to bottom */
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1; /* Behind the content */
+}
+
+.services .container:hover {
+	box-shadow: rgba(100, 100, 111, 0.5) 0px 20px 50px 0px; /* Increased shadow intensity and blur */
+	transform: translateY(-15px); /* More pronounced lift on hover */
+}
+
+.services .container img {
+	margin-top: 10px;
+	width: 70px;
+	height: 70px;
+	border-radius: 30px;
+	margin-left: 20px;
+}
+.services .container h1 {
+	margin-left: 20px;
+	font-family: 'Kumbh Sans', serif;
+	font-size: 2rem;
+	font-weight: lighter;
+}
+
+.services .container p {
+	margin-left: 20px;
+	font-family: 'Dancing Script', serif;
+	font-size: 2rem;
+	font-weight: lighter;
+}
+
+/* .services .container3 {
+	z-index: 2;
+	margin-top: -90px;
+	
+	width: 20vw;
+	height: 35vh;
+	background-color: #6b0504;
+	margin-bottom: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	box-shadow: rgba(226, 41, 4, 0.2) 0px 17px 79px 0px;
+	color: white;
+	border-radius: 10px;
+} */
+.services .container3 {
+	z-index: 2;
+	margin-top: -90px;
+	width: 20vw;
+	height: 35vh;
+	background-color: #6b0504; /* Rich red tone */
+	margin-bottom: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	box-shadow: rgba(226, 41, 4, 0.2) 0px 7px 29px 0px; /* Original subtle shadow */
+	color: white;
+	border-radius: 10px;
+	padding: 15px; /* Inner spacing for content */
+	transition: box-shadow 0.4s ease, transform 0.4s ease; /* Smooth animations */
+}
+
+.services .container3:hover {
+	box-shadow: rgba(226, 41, 4, 0.6) 0px 25px 60px 0px; /* Increased shadow opacity and blur */
+	transform: translateY(-15px); /* More pronounced lift on hover */
+}
+
+.container3 img {
+	margin-top: 10px;
+	width: 70px;
+	height: 70px;
+	border-radius: 30px;
+	margin-left: 20px;
+}
+.container3 h1 {
+	font-family: 'Kumbh Sans', serif;
+	font-size: 2rem;
+	font-weight: lighter;
+	margin-left: 20px;
+}
+
+.container3 p {
+	font-family: 'Dancing Script', serif;
+	font-size: 2rem;
+	font-weight: lighter;
+	margin-left: 20px;
+}
+
+/* Container for the content */
+.wineot-content {
+	padding: 40px;
+	background-color: #f5f5f5; /* Light gray background */
+	display: flex;
+	justify-content: center;
+}
+
+/* Grid layout */
+.wine-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 columns */
+	gap: 20px; /* Space between cards */
+	max-width: 1200px;
+	width: 100%;
+}
+
+/* Individual card */
+.wine-card {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Subtle shadow */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Card hover effect */
+.wine-card:hover {
+	box-shadow: rgba(100, 100, 111, 0.4) 0px 10px 40px 0px; /* Enhanced shadow on hover */
+	transform: translateY(-10px); /* Lift effect */
+}
+
+/* Logo at the top */
+.wine-logo {
+	font-size: 24px;
+	color: #6b0504; /* Deep red for wine theme */
+	margin-bottom: 10px;
+}
+
+/* Image */
+.wine-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	object-fit: cover; /* Ensure image fits nicely */
+}
+
+/* Details section */
+.wine-details {
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+.wine-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.wine-subtitle {
+	font-size: 14px;
+	color: #555; /* Subtle text color */
+	margin-bottom: 10px;
+}
+
+.wine-price {
+	font-size: 18px;
+	font-weight: bold;
+	color: #6b0504; /* Match logo color */
+	margin-bottom: 10px;
+}
+
+.wine-rating {
+	color: #ffcc00; /* Star color */
+	font-size: 16px;
+}
+
+/* Actions section */
+.wine-actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.wine-more {
+	font-size: 14px;
+	color: #6b0504;
+	text-decoration: none;
+}
+
+.wine-more:hover {
+	text-decoration: underline;
+}
+
+.wine-add-to-cart {
+	background-color: white;
+	color: #6b0504;
+	border: 2px solid #6b0504;
+	padding: 8px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wine-add-to-cart:hover {
+	background-color: #6b0504;
+	color: white;
 }
