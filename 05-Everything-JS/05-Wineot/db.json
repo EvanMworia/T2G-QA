@@ -1,0 +1,31 @@
+{
+	"users": [
+		{
+			"userId": 1,
+			"username": "admin",
+			"email": "admin@admin.com",
+			"password": "123"
+		}
+	],
+	"products": [
+		{
+			"productId": 1,
+			"productName": "Divai",
+			"productPrice": 1,
+			"productDescription": "Water to wine"
+		}
+	],
+	"cartItems": [
+		{
+			"userId": 1,
+			"addedProducts": [
+				{
+					"productId": 1,
+					"productName": "Divai",
+					"quantity": 1
+				}
+			],
+			"totalPrice": 1
+		}
+	]
+}
