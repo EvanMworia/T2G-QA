@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup</title>
+		<link rel="stylesheet" href="authStyle.css" />
+		<script defer src="auth.js"></script>
+	</head>
+	<body>
+		<section class="auth-container">
+			<div class="signup-form">
+				<h2>Sign Up</h2>
+				<form id="signupForm">
+					<label for="username">Username</label>
+					<input type="text" id="username" placeholder="Enter your username" required />
+
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="Enter your email" required />
+
+					<label for="password">Password</label>
+					<input type="password" id="password" placeholder="Enter your password" required />
+
+					<label for="confirm-password">Confirm Password</label>
+					<input type="password" id="confirm-password" placeholder="Confirm your password" required />
+
+					<button id="register-button" type="submit">Sign Up</button>
+				</form>
+			</div>
+			<h4>Already have an account? <a href="./login.html">Come wine?</a></h4>
+		</section>
+	</body>
+</html>
