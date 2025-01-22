@@ -8,8 +8,10 @@ let submitBtn = document.getElementById('submit-product');
 
 const productsURL = 'http://localhost:3000/products/';
 
-//ADMIN CRUD OPERATIONS
+//======EVENT LISTENERS ======
+submitBtn.addEventListener('click', addNewProduct);
 
+//ADMIN CRUD OPERATIONS
 async function addNewProduct() {
 	const data = {
 		name: productName.value.trim(),
@@ -50,4 +52,40 @@ async function addNewProduct() {
 	}
 }
 
-submitBtn.addEventListener('click', addNewProduct);
+async function getAllProducts() {
+	try {
+		let response = await fetch(productsURL);
+		if (!response.ok) {
+			throw new Error(`HTTP Error ${response.status}: ${response.statusText}`);
+		}
+		return await response.json();
+	} catch (error) {
+		console.error('Error fetching users:', error);
+		return []; // Default fallback value.
+	}
+}
+let tableContent = document.querySelector('tbody');
+async function populateAdminDashboard() {
+	try {
+		let products = await getAllProducts();
+		for (const product of products) {
+			tableContent.innerHTML += `<tr>
+			<td>${product.id}</td>
+							<td>${product.name}</td>
+							<td>${product.description}</td>
+							<td>$${product.price}</td>
+							<td><img src="${product.imageUrl}" alt="Wine A Image" /></td>
+							<td>${product.rating}/5</td>
+							<td>
+								<div class="button-container">
+									<button id="update-btn-1" class="update-btn">Update</button>
+									<button id="delete-btn-1" class="delete-btn">Delete</button>
+								</div>
+							</td>
+							</tr>`;
+		}
+	} catch (error) {
+		console.error('Something went wrong:', error);
+	}
+}
+populateAdminDashboard();
