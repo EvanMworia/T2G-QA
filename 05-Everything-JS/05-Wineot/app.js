@@ -13,6 +13,7 @@ async function getProducts() {
 		// Parse the JSON data
 		let data = await response.json();
 		console.log('This is what we found', data);
+
 		return data;
 	} catch (error) {
 		console.error('Something unexpected happened', error);
