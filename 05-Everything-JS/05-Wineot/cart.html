@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart</title>
+		<link rel="stylesheet" href="cart.css" />
+		<script defer src="app.js"></script>
+		<!-- <script defer src="cart.js"></script> -->
+	</head>
+	<body>
+		<header class="cart-header">
+			<h1>My Cart</h1>
+			<button class="back-to-products" id="checkout-btn" onclick="checkout()">Checkout</button>
+			<a href="index.html" class="back-to-products">Back to Products</a>
+		</header>
+		<main class="cart-container">
+			<table class="cart-table">
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Total</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody id="cart-items">
+					<!-- Cart items will be dynamically rendered here -->
+				</tbody>
+			</table>
+			<div class="cart-summary">
+				<h2>Order Summary</h2>
+				<p>Total: $<span id="cart-total">0.00</span></p>
+			</div>
+		</main>
+	</body>
+</html>

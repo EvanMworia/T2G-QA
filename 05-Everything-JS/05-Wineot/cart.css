@@ -1,0 +1,96 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+}
+
+.cart-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #6b0504;
+	color: white;
+	padding: 1rem;
+}
+
+.cart-header h1 {
+	margin: 0;
+}
+
+.back-to-products {
+	color: white;
+	text-decoration: none;
+	background-color: #333;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.back-to-products:hover {
+	background-color: #555;
+}
+
+.cart-container {
+	width: 90%;
+	margin: 2rem auto;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+}
+tbody {
+	display: flex;
+	flex-direction: column;
+}
+.cart-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1rem;
+}
+
+.cart-table th,
+.cart-table td {
+	border: 1px solid #ddd;
+	padding: 0.8rem;
+	text-align: center;
+}
+
+.cart-table th {
+	background-color: #f2f2f2;
+	font-weight: bold;
+}
+
+.cart-summary {
+	text-align: right;
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+
+.cart-summary p {
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.cart-actions button {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.cart-actions button.increment {
+	background-color: #4caf50;
+	color: white;
+}
+
+.cart-actions button.decrement {
+	background-color: #f44336;
+	color: white;
+}
+
+.cart-actions button.remove {
+	background-color: #ff9800;
+	color: white;
+}
