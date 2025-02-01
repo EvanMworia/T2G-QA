@@ -12,6 +12,7 @@ async function loginUser() {
 	try {
 		let email = document.querySelector('#login-email').value.trim();
 		let password = document.querySelector('#login-password').value.trim();
+		let messageBox = document.querySelector('.message');
 		console.log('email entered is', email);
 		console.log('password entered is', password);
 
@@ -23,10 +24,18 @@ async function loginUser() {
 		let foundUser = usersData.find((user) => user.email === email);
 		if (!foundUser) {
 			alert('Invalid Credentials');
+			messageBox.innerHTML = `<p>Invalid Credentials</p>`;
+			setTimeout(() => {
+				messageBox.innerHTML = '';
+			}, 2000);
 			return;
 		}
 		if (foundUser.password != password) {
 			alert('Invalid Credentials');
+			messageBox.innerHTML = `<p>Invalid Credentials</p>`;
+			setTimeout(() => {
+				messageBox.innerHTML = '';
+			}, 2000);
 			return;
 		}
 		if (foundUser.email == 'admin@admin.com') {

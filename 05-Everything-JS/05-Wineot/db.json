@@ -1,49 +1,72 @@
 {
   "users": [
     {
-      "userId": 1,
+      "id": "cae0",
+      "username": "test",
+      "email": "test@example.com",
+      "password": "123"
+    },
+    {
+      "id": "aee6",
+      "username": "test",
+      "email": "evannji99@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "d49a",
       "username": "admin",
       "email": "admin@admin.com",
+      "password": "123"
+    },
+    {
+      "id": "901a",
+      "username": "evannji99@gmail.com",
+      "email": "evgmail.",
       "password": "123"
     }
   ],
   "products": [
     {
-      "id": 1,
-      "name": "Divai",
-      "description": "Water to wine",
-      "price": 1,
-      "image": "image.com",
-      "rating": 5
-    },
-    {
-      "id": "01fb",
-      "name": "test",
-      "description": "test description",
-      "price": "2",
-      "imageUrl": "https://i.pinimg.com/736x/2b/6d/dd/2b6ddd34e8260e10dd157b6ec01a2e21.jpg",
-      "rating": "2"
-    },
-    {
-      "id": "a825",
       "name": "Crimson Vines Cabernet",
       "description": "rich and full-bodied red wine",
       "price": "24.99",
+      "imageUrl": "https://i.pinimg.com/736x/2b/6d/dd/2b6ddd34e8260e10dd157b6ec01a2e21.jpg",
+      "rating": "4.5",
+      "id": "5820"
+    },
+    {
+      "name": "Velvet Noir Shiraz",
+      "description": "Bold and spicy, with layers of black pepper, blueberry, and dark chocolate.",
+      "price": "34.99",
       "imageUrl": "https://i.pinimg.com/736x/39/2b/22/392b2283f457d6a89f494c65a3070792.jpg",
-      "rating": "4.5"
+      "rating": "4.3",
+      "id": "30bd"
+    },
+    {
+      "name": "Test",
+      "description": "Bold and spicy, with layers of black pepper, blueberry, and dark chocolate.",
+      "price": "34.99",
+      "imageUrl": "https://i.pinimg.com/736x/39/2b/22/392b2283f457d6a89f494c65a3070792.jpg",
+      "rating": "4.3",
+      "id": "30bc"
     }
   ],
   "cartItems": [
     {
-      "userId": 1,
-      "addedProducts": [
-        {
-          "productId": 1,
-          "productName": "Divai",
-          "quantity": 1
-        }
-      ],
-      "totalPrice": 1
+      "id": "1039",
+      "productId": "5820",
+      "name": "Crimson Vines Cabernet",
+      "price": "24.99",
+      "imageUrl": "https://i.pinimg.com/736x/2b/6d/dd/2b6ddd34e8260e10dd157b6ec01a2e21.jpg",
+      "quantity": 1
+    },
+    {
+      "id": "7233",
+      "productId": "5820",
+      "name": "Crimson Vines Cabernet",
+      "price": "24.99",
+      "imageUrl": "https://i.pinimg.com/736x/2b/6d/dd/2b6ddd34e8260e10dd157b6ec01a2e21.jpg",
+      "quantity": 1
     }
   ]
 }
